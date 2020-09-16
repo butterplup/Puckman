@@ -1,40 +1,36 @@
 plugins {
     id 'java'
-
     // Apply the application plugin to add support for building an application
     id 'application'
-    id 'jacoco'
+    // JavaFX plugin
+    id 'org.openjfx.javafxplugin' version '0.0.8'
 }
 
-group 'org.butterplup'
+group 'com.butterplup'
 version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     // Can be other things like
-    // mavenCentral()
+    mavenCentral()
     // google()
-    jcenter()
+    //jcenter()
 
 }
 
-jacoco {
-    toolVersion = "0.8.4"
-    reportsDir = file("$buildDir/coverage")
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled false
-        csv.enabled false
-        html.destination file("${buildDir}/jacocoHtml")
-    }
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
 }
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:27.0.1-jre'
-    implementation 'org.processing:core:3.3.7'
-
+    implementation 'org.openjfx:javafx-base:11:win'
+    implementation 'org.openjfx:javafx-controls:11:win'
+    implementation 'org.openjfx:javafx-fxml:11:win'
+    implementation 'org.openjfx:javafx-graphics:11:win'
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
