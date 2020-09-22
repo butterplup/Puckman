@@ -15,4 +15,5 @@ public class Puck extends Creature {
 
     // Implemented abstract methods
 
+
 }

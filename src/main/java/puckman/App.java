@@ -26,13 +26,13 @@ public class App extends Application {
     //Define any fields here
     // Game characters
     private Puck _puckman;
-    private List<Jelly> jellies = new ArrayList<Jelly>();
+    private List<Jelly> jellies = new ArrayList<>();
     //private GameMap maze = new GameMap();
     // Starting coordinates for puckman and the jellys
-    private int puckStartXCoord;
-    private int puckStartYCoord;
-    private int jellyStartXCoord;
-    private int jellyStartYCoord;
+    private int _puckStartXCoord = 50;
+    private int _puckStartYCoord = 50;
+    private int jellyStartXCoord = 75;
+    private int jellyStartYCoord = 75;
 
     // Game init info
     private boolean gameOver = false;
@@ -75,6 +75,7 @@ public class App extends Application {
 
         _primaryStage.setScene(_levelOneScene);
         _primaryStage.show();
+
     }
 
     /**
@@ -88,10 +89,11 @@ public class App extends Application {
         _primaryStage.setMaxHeight(1000);
         _primaryStage.setMaxWidth(1000);
 
-        _puckman = new Puck(puckStartXCoord, puckStartYCoord, 25, 25);
+        _puckman = new Puck(50, 50, 25, 25);
 
         _root.setPrefSize(600, 600);
         _root.getChildren().add(_puckman);
+        _levelOneScene = new Scene(_root);
     }
 
     /**
@@ -110,7 +112,7 @@ public class App extends Application {
 
     /**
      * Just to set this class as the main class, launches app
-     * @param args
+     * @param args - :shrugs:
      */
     public static void main(String[] args) {
         launch(args);

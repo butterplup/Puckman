@@ -8,7 +8,7 @@ public abstract class Creature extends Rectangle {
     // Declare any common fields here
     private Color _colour;
     private String _name;
-    private boolean alive = true;
+    private boolean _alive = true;
 
     /**
      * Constructor
@@ -22,9 +22,7 @@ public abstract class Creature extends Rectangle {
 
     }
     // Set up different values depending on which Creature is being made
-    public void setColour(Color colour) {
-        _colour = colour;
-    }
+    public void setColour(Color colour) { _colour = colour; }
     public void setName(String name) {
         _name = name;
     }

@@ -9,7 +9,7 @@ plugins {
 group 'com.butterplup'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = JavaVersion.VERSION_11
+//sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     // Can be other things like
@@ -21,16 +21,16 @@ repositories {
 
 javafx {
     version = "11.0.2"
-    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.base', 'javafx.media' ]
 }
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:27.0.1-jre'
-    implementation 'org.openjfx:javafx-base:11:win'
-    implementation 'org.openjfx:javafx-controls:11:win'
-    implementation 'org.openjfx:javafx-fxml:11:win'
-    implementation 'org.openjfx:javafx-graphics:11:win'
+    //implementation 'org.openjfx:javafx-base:11:win'
+    //implementation 'org.openjfx:javafx-controls:11:win'
+    //implementation 'org.openjfx:javafx-fxml:11:win'
+    //implementation 'org.openjfx:javafx-graphics:11:win'
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
